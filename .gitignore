@@ -25,3 +25,5 @@ Thumbs.db
 # Editor/project-specific settings (optional, adjust based on your environment)
 .vscode/
 .idea/
+backend/.env
+.github/workflows/node.yml
