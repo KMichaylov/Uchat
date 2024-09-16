@@ -7,6 +7,8 @@ interface InputProperties {
   type: "emial" | "image" | "password" | "text";
   labelName: string;
   onChange: ChangeEventHandler<HTMLInputElement> | undefined;
+  stylingInput: string;
+  stylingLabel: string;
 }
 
 export const CustomInput: React.FC<InputProperties> = ({
@@ -16,16 +18,21 @@ export const CustomInput: React.FC<InputProperties> = ({
   type,
   labelName,
   onChange,
+  stylingInput,
+  stylingLabel,
 }) => {
   return (
     <>
-      <label htmlFor={labelName}>{inputLabel}</label>
+      <label htmlFor={labelName} className={stylingLabel}>
+        {inputLabel}
+      </label>
       <input
         type={type}
         id={labelName}
         placeholder={inputPlaceholder}
         value={inputValue}
         onChange={onChange}
+        className={stylingInput}
       ></input>
     </>
   );
