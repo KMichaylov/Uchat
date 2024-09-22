@@ -1,12 +1,6 @@
-interface ButtonProps {
-  text: string;
-  color: "primary-color" | "danger-color" | "warning-color";
-  size?: "normal" | "large";
-  type: "button" | "submit" | "reset";
-  onClick?: () => void;
-}
+import { ButtonModel } from "../../models/ButtonModel";
 
-export const CustomButton: React.FC<ButtonProps> = ({
+export const CustomButton: React.FC<ButtonModel> = ({
   text,
   color,
   type,
