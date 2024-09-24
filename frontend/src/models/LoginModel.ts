@@ -1,6 +1,6 @@
 
 export interface LoginFormModel {
-    type: "LOGIN";
+    type: string;
     email: string;
     password: string;
     onSubmit: () => void;

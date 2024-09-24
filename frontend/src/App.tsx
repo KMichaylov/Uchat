@@ -16,16 +16,6 @@ const loginConfig: LoginFormModel = {
   onSubmit: handleSubmit,
 };
 
-const registrationConfig: RegistrationFormModel = {
-  type: "REGISTRATION",
-  userName: "",
-  email: "",
-  password: "",
-  confirmPassword: "",
-  profilePicture: new File([], ""),
-  onSubmit: handleSubmit,
-};
-
 function App() {
   return (
     <>

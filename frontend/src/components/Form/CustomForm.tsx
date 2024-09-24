@@ -6,17 +6,22 @@ import { LoginFormModel } from "../../models/LoginModel";
 import { RegistrationFormModel } from "../../models/RegistrationModel";
 import { useState } from "react";
 
-// Distinguish between Login and Registration
-type FormType = LoginFormModel | RegistrationFormModel;
-
-export const CustomForm: React.FC<FormType> = (props) => {
-  const [formValues, setFormValues] = useState<FormType>(() => {
-    if (props.type === "LOGIN") {
+export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
+  props
+) => {
+  const initializeData = (formType: string) => {
+    if (formType === "LOGIN") {
       return { email: "", password: "" };
-    } else if (props.type === "REGISTRATION") {
+    } else if (formType === "REGISTRATION") {
       return { username: "", email: "", password: "", confirmPassword: "" };
     }
-  });
+    throw new Error(`The following option ${formType} is not specified`);
+  };
+  const [formValues, setFormValues] = useState(() =>
+    initializeData(props.type)
+  );
+
+  const handleValidation = () => {};
 
   const handleChange = (fieldName: string, newValue: string) => {
     setFormValues((prevValues) => ({
