@@ -1,17 +1,6 @@
-import { ChangeEventHandler } from "react";
+import { InputModel } from "../../models/InputModel";
 
-interface InputProperties {
-  inputLabel: string;
-  inputValue: string;
-  inputPlaceholder?: string;
-  type: "emial" | "image" | "password" | "text";
-  labelName: string;
-  onChange: ChangeEventHandler<HTMLInputElement> | undefined;
-  stylingInput: string;
-  stylingLabel: string;
-}
-
-export const CustomInput: React.FC<InputProperties> = ({
+export const CustomInput: React.FC<InputModel> = ({
   inputLabel,
   inputPlaceholder,
   inputValue,
