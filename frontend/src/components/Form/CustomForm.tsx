@@ -6,6 +6,7 @@ import { LoginFormModel } from "../../models/LoginModel";
 import { RegistrationFormModel } from "../../models/RegistrationModel";
 import { useState } from "react";
 
+// TODO: Add comments before finishing the component
 export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
   props
 ) => {
@@ -21,6 +22,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
     initializeData(props.type)
   );
 
+  const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+
   const handleValidation = () => {};
 
   const handleChange = (fieldName: string, newValue: string) => {
@@ -31,6 +34,7 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
   };
 
   // TODO: Finish the implementation of the CustomForm and test it extensively
+  //  TODO: Add styling to the components
   return (
     <form onSubmit={props.onSubmit}>
       {props.type === "LOGIN" && (
@@ -43,6 +47,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("email", event.currentTarget.value)
             }
+            stylingInput=""
+            stylingLabel=""
           />
           <CustomInput
             type="password"
