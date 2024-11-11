@@ -23,7 +23,11 @@ function RegistrationPage() {
   return (
     <>
       <div className="bg-background-pattern">
-        <CustomForm {...registrationConfig} />
+        <div className="container mx-auto bg-white rounded-lg shadow-lg p-8 max-w-lg">
+          {/* TODO: Create the logo component */}
+          <Logo />
+          <CustomForm {...registrationConfig} />
+        </div>
       </div>
     </>
   );

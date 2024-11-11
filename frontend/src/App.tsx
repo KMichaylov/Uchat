@@ -20,7 +20,9 @@ function App() {
   return (
     <>
       <div className="bg-background-pattern">
+      <div className="container mx-auto bg-white rounded-lg shadow-lg p-8 max-w-lg">
         <CustomForm {...loginConfig} />
+      </div>
       </div>
     </>
   );
