@@ -20,4 +20,6 @@ export default {
     },
   },
   plugins: [],
+  // forces to include the color
+  safelist: ["bg-warning-color"],
 };
