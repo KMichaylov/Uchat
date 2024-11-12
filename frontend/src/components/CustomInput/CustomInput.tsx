@@ -11,8 +11,8 @@ export const CustomInput: React.FC<InputModel> = ({
   stylingLabel,
 }) => {
   return (
-    <>
-      <label htmlFor={labelName} className={stylingLabel}>
+    <div className="flex flex-col">
+      <label htmlFor={labelName} className={`${stylingLabel} mb-2`}>
         {inputLabel}
       </label>
       <input
@@ -22,7 +22,7 @@ export const CustomInput: React.FC<InputModel> = ({
         value={inputValue}
         onChange={onChange}
         className={stylingInput}
-      ></input>
-    </>
+      />
+    </div>
   );
 };
