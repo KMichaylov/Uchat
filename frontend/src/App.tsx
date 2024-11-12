@@ -1,12 +1,15 @@
-import "./App.css";
+import { CustomButton } from "./components/CustomButton/CustomButton";
 import { CustomForm } from "./components/Form/CustomForm";
 import { LoginFormModel } from "./models/LoginModel";
-import { RegistrationFormModel } from "./models/RegistrationModel";
 
 // TODO extract into custom hook
 const handleSubmit = () => {
-  // Impelemnt the logic here for both registration and login
-  console.log(true);
+  const isValid = true; 
+  if (isValid) {
+    console.log("Form is valid");
+  } else {
+    console.log("Form is not valid");
+  }
 };
 
 const loginConfig: LoginFormModel = {
@@ -19,10 +22,11 @@ const loginConfig: LoginFormModel = {
 function App() {
   return (
     <>
-      <div className="bg-background-pattern">
-      <div className="container mx-auto bg-white rounded-lg shadow-lg p-8 max-w-lg">
-        <CustomForm {...loginConfig} />
-      </div>
+      {/* Tailwind classes to cover the full screen with a background */}
+      <div className="min-h-screen bg-background-pattern bg-cover bg-center flex items-center justify-center">
+        <div className="container mx-auto bg-white rounded-lg shadow-lg p-8 max-w-lg">
+          <CustomForm {...loginConfig} />
+        </div>
       </div>
     </>
   );
