@@ -135,6 +135,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("username", event.currentTarget.value)
             }
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingLabel="text-gray-700 font-medium"
           />
           {errors.username && <div className="error">{errors.username}</div>}
 
@@ -146,6 +148,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("email", event.currentTarget.value)
             }
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingLabel="text-gray-700 font-medium"
           />
           {errors.email && <div className="error">{errors.email}</div>}
 
@@ -157,6 +161,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("password", event.currentTarget.value)
             }
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingLabel="text-gray-700 font-medium"
           />
           {errors.password && <div className="error">{errors.password}</div>}
 
@@ -168,6 +174,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("confirmPassword", event.currentTarget.value)
             }
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingLabel="text-gray-700 font-medium"
           />
           {errors.confirmPassword && (
             <div className="error">{errors.confirmPassword}</div>
