@@ -67,7 +67,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
         formValues.profilePicture &&
         pictureFormatRegex.test(formValues.profilePicture)
       ) {
-        newErrors.profilePicture = "Profile picture format must be a JPG or PNG.";
+        newErrors.profilePicture =
+          "Profile picture format must be a JPG or PNG.";
       }
     }
 
@@ -87,9 +88,7 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-  
-  };
+  const handleSubmit = (event: React.FormEvent) => {};
 
   return (
     <form onSubmit={handleSubmit}>
@@ -103,7 +102,7 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("email", event.currentTarget.value)
             }
-            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             stylingLabel="text-gray-700 font-medium"
           />
           {errors.email && <div className="error">{errors.email}</div>}
@@ -116,12 +115,16 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("password", event.currentTarget.value)
             }
-            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             stylingLabel="text-gray-700 font-medium"
           />
           {errors.password && <div className="error">{errors.password}</div>}
 
-          <CustomButton type="submit" text="Login" color="warning-color" />
+          <CustomButton
+            type="submit"
+            text="Login"
+            styleButton="w-full font-bold bg-warning-color text-white py-2 rounded-md"
+          />
         </>
       )}
 
@@ -135,7 +138,7 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("username", event.currentTarget.value)
             }
-            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             stylingLabel="text-gray-700 font-medium"
           />
           {errors.username && <div className="error">{errors.username}</div>}
@@ -148,7 +151,7 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("email", event.currentTarget.value)
             }
-            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             stylingLabel="text-gray-700 font-medium"
           />
           {errors.email && <div className="error">{errors.email}</div>}
@@ -161,7 +164,7 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("password", event.currentTarget.value)
             }
-            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             stylingLabel="text-gray-700 font-medium"
           />
           {errors.password && <div className="error">{errors.password}</div>}
@@ -174,7 +177,7 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("confirmPassword", event.currentTarget.value)
             }
-            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             stylingLabel="text-gray-700 font-medium"
           />
           {errors.confirmPassword && (
@@ -194,12 +197,16 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             <div className="error">{errors.profilePicture}</div>
           )}
 
-          <div className="button-group">
-            <CustomButton type="button" text="Back" color="retract-color" />
+          <div className="button-group flex flex-row space-x-4">
+            <CustomButton
+              type="button"
+              text="Back"
+              styleButton="w-full font-bold bg-retract-color text-white py-2 rounded-md"
+            />
             <CustomButton
               type="submit"
               text="Create Account"
-              color="warning-color"
+              styleButton="w-full font-bold bg-warning-color text-white py-2 rounded-md"
             />
           </div>
         </>
