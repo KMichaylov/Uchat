@@ -22,12 +22,22 @@ const loginConfig: LoginFormModel = {
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-background-pattern bg-cover bg-center flex items-center justify-center">
-      <div className="container mx-auto bg-white rounded-lg shadow-lg p-8 max-w-lg">
-        <div className="flex flex-row space-y-4">
-          <Logo/>
+      <div className="min-h-screen bg-background-pattern bg-cover bg-center flex items-center justify-center px-4">
+        <div className="container mx-auto bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
+          <div className="flex flex-col space-y-8">
+            <div className="flex justify-center gap-y-10">
+              <Logo />
+            </div>
             <CustomForm {...loginConfig} />
-            <p>Don't have an account? Register here</p>
+            <div className="flex items-center justify-center mt-8">
+              <p className="text-center text-gray-600">
+                Don't have an account?{" "}
+                {/* TODO use react routers */}
+                <a href="#" className="text-blue-500 underline">
+                  Register here
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

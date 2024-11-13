@@ -103,6 +103,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("email", event.currentTarget.value)
             }
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingLabel="text-gray-700 font-medium"
           />
           {errors.email && <div className="error">{errors.email}</div>}
 
@@ -114,6 +116,8 @@ export const CustomForm: React.FC<LoginFormModel | RegistrationFormModel> = (
             onChange={(event) =>
               handleChange("password", event.currentTarget.value)
             }
+            stylingInput="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            stylingLabel="text-gray-700 font-medium"
           />
           {errors.password && <div className="error">{errors.password}</div>}
 
