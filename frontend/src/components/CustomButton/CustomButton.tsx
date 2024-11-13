@@ -7,14 +7,12 @@ export const CustomButton: React.FC<ButtonModel> = ({
   onClick,
 }) => {
   return (
-    <>
-      <button
-        onClick={onClick}
-        className={`bg-${color} text-white`}
-        type={type}
-      >
-        {text}
-      </button>
-    </>
+    <button
+      onClick={onClick}
+      className={`w-full font-bold bg-${color} text-white py-2 rounded-md`}
+      type={type}
+    >
+      {text}
+    </button>
   );
 };
